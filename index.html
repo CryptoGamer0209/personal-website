@@ -1,0 +1,49 @@
+﻿<!doctype html>
+<html lang="de">
+  <head>
+    <!-- Basis Metadaten -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Website</title>
+    <meta
+      name="description"
+      content="Persoenliche Website mit Portfolio und Linktree in modernem, dunklem Design."
+    />
+
+    <!-- Schriftarten -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Globale Styles -->
+    <link rel="stylesheet" href="./assets/styles/base.css" />
+    <link rel="stylesheet" href="./assets/styles/components.css" />
+  </head>
+  <body>
+    <!-- Dekorativer Hintergrund -->
+    <div class="site-bg" aria-hidden="true"></div>
+
+    <!-- Globale Navigation -->
+    <header class="site-header" id="top">
+      <nav class="nav-wrap container">
+        <a class="brand" href="./index.html">NV</a>
+        <div class="nav-links">
+          <a href="./portfolio.html">Portfolio</a>
+          <a href="./linktree.html">Links</a>
+          <a href="#kontakt">Kontakt</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hauptinhalt wird per JavaScript modular gerendert -->
+    <main id="app"></main>
+
+    <!-- Einwilligungs- und Analytics-Logik -->
+    <script type="module" src="./assets/scripts/legal-consent.js"></script>
+    <!-- Einstiegsskript der Startseite -->
+    <script type="module" src="./assets/scripts/main.js"></script>
+  </body>
+</html>

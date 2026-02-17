@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html lang="de">
+  <head>
+    <!-- Basis Metadaten -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Links | Niko V</title>
+    <meta name="description" content="Linktree Unterseite mit allen Links von Niko V." />
+
+    <!-- Schriftarten -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Globale Styles -->
+    <link rel="stylesheet" href="./assets/styles/base.css" />
+    <link rel="stylesheet" href="./assets/styles/components.css" />
+  </head>
+  <body>
+    <!-- Dekorativer Hintergrund -->
+    <div class="site-bg" aria-hidden="true"></div>
+
+    <!-- Globale Navigation -->
+    <header class="site-header" id="top">
+      <nav class="nav-wrap container">
+        <a class="brand" href="./index.html">NV</a>
+        <div class="nav-links">
+          <a href="./portfolio.html">Portfolio</a>
+          <a href="./linktree.html">Links</a>
+          <a href="./index.html#kontakt">Kontakt</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hauptinhalt wird per JavaScript modular gerendert -->
+    <main id="app"></main>
+
+    <!-- Einwilligungs- und Analytics-Logik -->
+    <script type="module" src="./assets/scripts/legal-consent.js"></script>
+    <!-- Einstiegsskript der Linktree-Seite -->
+    <script type="module" src="./assets/scripts/linktree-page.js"></script>
+  </body>
+</html>
