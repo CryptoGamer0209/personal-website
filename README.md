@@ -11,8 +11,7 @@ Modulare persoenliche Website mit separaten Unterseiten fuer Portfolio und Linkt
 
 ## Struktur
 - `assets/data/site-content.js` - alle Inhalte zentral
-- `assets/data/legal-config.js` - GA4 Measurement ID
-- `assets/scripts/legal-consent.js` - Cookie-Banner + Consent + GA4-Loading
+- `assets/scripts/legal-consent.js` - Cookie-Hinweis + Einstellungen
 - `assets/scripts/main.js` - Startseite
 - `assets/scripts/portfolio-page.js` - Portfolio Seite
 - `assets/scripts/linktree-page.js` - Linktree Seite
@@ -21,19 +20,18 @@ Modulare persoenliche Website mit separaten Unterseiten fuer Portfolio und Linkt
 - `vercel.json` - Vercel Konfiguration
 
 ## Lokal starten
-Im Ordner `personal-site`:
+Im Ordner `personal-website`:
 - `python -m http.server 5500`
 - dann `http://localhost:5500`
 
-## Google Analytics 4 (kostenlos)
-1. In Google Analytics eine GA4 Property anlegen.
-2. Measurement ID (Format `G-XXXXXXXXXX`) kopieren.
-3. In `assets/data/legal-config.js` bei `ga4MeasurementId` eintragen.
-4. Tracking wird erst nach Einwilligung im Cookie-Banner geladen.
+## Vercel Analytics
+- Analytics wird in Vercel im Projekt aktiviert.
+- Die Website nutzt das offizielle Insights-Snippet `/_vercel/insights/script.js`.
+- Datenschutzhinweise dazu stehen in `datenschutz.html`.
 
 ## Vercel Deployment
 1. Projekt bei Vercel importieren.
-2. Root Directory auf `personal-site` setzen.
+2. Root Directory auf `personal-website` setzen.
 3. Deploy ausfuehren.
 4. Domains `nikovehrens.de` und `www.nikovehrens.de` im Vercel Domain-Bereich hinterlegen.
 5. Fuer Subdomains in Vercel einen Wildcard-Eintrag `*.nikovehrens.de` konfigurieren und DNS entsprechend setzen.
