@@ -1,14 +1,27 @@
-﻿// Rendert die Links-Sektion mit externen Plattform-Links.
+// Rendert die Links-Sektion mit externen Plattform-Links.
 export function renderLinktree(content) {
+  const isSubdirPreview = window.location.pathname.includes("/personal-website/");
+  const assetPrefix = isSubdirPreview ? "/personal-website/" : "/";
+
+  function resolveMaybeLocalPath(value) {
+    if (!value) return "";
+    if (/^(https?:)?\/\//i.test(value) || value.startsWith("data:")) {
+      return value;
+    }
+    const normalized = String(value).replace(/^\.?\//, "");
+    return `${assetPrefix}${normalized}`;
+  }
+
   // Pro Link eine klickbare Karte erzeugen.
   const links = content.links
     .map((item) => {
-      const href = item.url || item.path || "#";
+      const rawHref = item.url || item.path || "#";
       const isFile = item.type === "file";
+      const href = isFile ? resolveMaybeLocalPath(rawHref) : rawHref;
       const isExternal = !isFile && /^https?:\/\//i.test(href);
       const targetAttr = isExternal ? ' target="_blank" rel="noreferrer"' : "";
       const downloadAttr = item.download ? " download" : "";
-      const image = item.image || "./assets/svg/links/github.svg";
+      const image = resolveMaybeLocalPath(item.image || "assets/svg/links/github.svg");
       const arrow = isFile ? "Datei" : "->";
 
       return `
