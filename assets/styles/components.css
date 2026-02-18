@@ -614,7 +614,7 @@ body:not(.home-page) main {
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1024px), (hover: none) and (pointer: coarse) {
   body:not(.home-page) main {
     padding-bottom: 72px;
   }
