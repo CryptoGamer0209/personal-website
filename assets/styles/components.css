@@ -309,12 +309,15 @@ h3 {
 
 /* Platz für die fixe Leiste auf allen Unterseiten */
 body:not(.home-page) main {
-  padding-bottom: 68px;
+  padding-bottom: 56px;
 }
 
 .home-legal-links {
   margin: 0;
-  min-height: 54px;
+  min-height: 42px;
+  padding: 0 8px;
+  font-size: 0.84rem;
+  gap: 8px;
 }
 
 /* Stacks-Seite */
@@ -606,7 +609,28 @@ body:not(.home-page) main {
   }
 
   .home-legal-links {
-    min-height: 48px;
-    font-size: 0.88rem;
+    min-height: 40px;
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 720px) {
+  body:not(.home-page) main {
+    padding-bottom: 72px;
+  }
+
+  .hero-side {
+    padding: 14px;
+  }
+
+  .panel {
+    min-height: 78px;
+  }
+
+  .home-legal-links {
+    min-height: auto;
+    padding: 7px 10px;
+    gap: 6px;
+    font-size: 0.8rem;
   }
 }

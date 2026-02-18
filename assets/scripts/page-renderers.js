@@ -99,16 +99,16 @@ async function loadStaticMain(fileName) {
 
 export function preloadRouteAssets(pathname) {
   const path = pathname.toLowerCase();
-  if (path.endsWith("/portfolio.html")) {
+  if (path.endsWith("/portfolio") || path.endsWith("/portfolio.html")) {
     return loadJsonData("./assets/data/portfolio.json");
   }
-  if (path.endsWith("/linktree.html")) {
+  if (path.endsWith("/links") || path.endsWith("/linktree") || path.endsWith("/linktree.html")) {
     return loadJsonData("./assets/data/links.json");
   }
-  if (path.endsWith("/stacks.html")) {
+  if (path.endsWith("/stacks") || path.endsWith("/stacks.html")) {
     return loadStaticMain("stacks.html");
   }
-  if (path.endsWith("/styleguide.html")) {
+  if (path.endsWith("/styleguide") || path.endsWith("/styleguide.html")) {
     return loadStaticMain("styleguide.html");
   }
   return Promise.resolve();

@@ -2,10 +2,10 @@
 export function renderHero(content) {
   // Stats aus den Content-Daten in kleine Panels umwandeln.
   const statPages = [
-    { label: "Projekte", page: "Portfolio", href: "./portfolio.html" },
-    { label: "Links", page: "Links", href: "./linktree.html" },
-    { label: "Stack", page: "Stacks", href: "./stacks.html" },
-    { label: "Fokus", page: "Styleguide", href: "./styleguide.html" }
+    { label: "Projekte", page: "Portfolio", href: "/portfolio.html" },
+    { label: "Links", page: "Links", href: "/linktree.html" },
+    { label: "Stack", page: "Stacks", href: "/stacks.html" },
+    { label: "Fokus", page: "Styleguide", href: "/styleguide.html" }
   ];
 
   const stats = statPages
@@ -31,3 +31,4 @@ export function renderHero(content) {
     </section>
   `;
 }
+

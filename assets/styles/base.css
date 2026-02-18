@@ -88,6 +88,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
+  position: relative;
 }
 
 /* Kreisförmiges Brand-Element */
@@ -113,6 +115,29 @@ img {
   border: 1px solid rgba(220, 220, 220, 0.28);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.02);
+}
+
+.nav-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid rgba(220, 220, 220, 0.28);
+  background: rgba(255, 255, 255, 0.02);
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-toggle-line {
+  width: 17px;
+  height: 2px;
+  background: var(--text-main);
+  border-radius: 999px;
+  transition: transform 220ms ease, opacity 220ms ease;
 }
 
 .nav-active-pill {
@@ -189,15 +214,68 @@ img {
 
 /* Mobile Feinschliff */
 @media (max-width: 720px) {
+  body.home-page {
+    height: auto;
+    min-height: 100svh;
+    overflow: auto;
+  }
+
   .section {
     padding: 68px 0;
   }
 
+  .nav-wrap {
+    min-height: 72px;
+    padding: 8px 0;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
   .nav-links {
-    gap: 14px;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    display: grid;
+    gap: 6px;
+    padding: 8px;
+    border-radius: 16px;
+    background: rgba(10, 10, 10, 0.96);
+    border: 1px solid rgba(220, 220, 220, 0.22);
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity 220ms ease, transform 220ms ease;
+  }
+
+  .nav-wrap.nav-open .nav-links {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .nav-wrap.nav-open .nav-toggle-line:first-child {
+    transform: translateY(3.5px) rotate(45deg);
+  }
+
+  .nav-wrap.nav-open .nav-toggle-line:last-child {
+    transform: translateY(-3.5px) rotate(-45deg);
+  }
+
+  .nav-active-pill {
+    display: none;
   }
 
   .nav-links a {
     font-size: 0.9rem;
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px 12px;
+    border-radius: 12px;
   }
 }

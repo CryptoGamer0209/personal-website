@@ -26,13 +26,14 @@
 
     <header class="site-header" id="top">
       <nav class="nav-wrap container">
-        <a class="brand" href="./index.html">NV</a>
-        <div class="nav-links">
-          <a data-nav-item="home" href="./index.html">Home</a>
-          <a data-nav-item="portfolio" href="./portfolio.html">Portfolio</a>
-          <a data-nav-item="linktree" href="./linktree.html">Links</a>
-          <a data-nav-item="stacks" href="./stacks.html">Stacks</a>
-          <a data-nav-item="styleguide" href="./styleguide.html">Styleguide</a>
+        <a class="brand" href="/index.html">NV</a>
+        <button class="nav-toggle" type="button" aria-label="Navigation umschalten" aria-expanded="false" aria-controls="site-nav-links"><span class="nav-toggle-line"></span><span class="nav-toggle-line"></span></button>
+        <div id="site-nav-links" class="nav-links">
+          <a data-nav-item="home" href="/index.html">Home</a>
+          <a data-nav-item="portfolio" href="/portfolio.html">Portfolio</a>
+          <a data-nav-item="linktree" href="/linktree.html">Links</a>
+          <a data-nav-item="stacks" href="/stacks.html">Stacks</a>
+          <a data-nav-item="styleguide" href="/styleguide.html">Styleguide</a>
         </div>
       </nav>
     </header>
@@ -50,51 +51,51 @@
           <section class="stack-section reveal in" aria-labelledby="frontend-head">
             <h2 id="frontend-head" class="stack-section-title">Frontend</h2>
             <div class="stack-grid">
-              <article class="tech-card"><img class="tech-logo" src="./assets/svg/tech/html5.svg" alt="HTML5 Logo" /><h3>HTML5</h3><p>Struktur und Semantik für performante Webseiten.</p><a href="https://html.spec.whatwg.org/" target="_blank" rel="noreferrer">Docs</a></article>
-              <article class="tech-card"><img class="tech-logo" src="./assets/svg/tech/css.svg" alt="CSS3 Logo" /><h3>CSS3</h3><p>Modernes Layout, Grid-Systeme und visuelles System.</p><a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank" rel="noreferrer">Docs</a></article>
-              <article class="tech-card"><img class="tech-logo" src="./assets/svg/tech/javascript.svg" alt="JavaScript Logo" /><h3>JavaScript</h3><p>Interaktive Logik für Komponenten und Nutzerfluss.</p><a href="https://tc39.es/ecma262/" target="_blank" rel="noreferrer">Docs</a></article>
-              <article class="tech-card"><img class="tech-logo" src="./assets/svg/tech/react.svg" alt="React Logo" /><h3>React</h3><p>Komponentenbasierte UI für skalierbare Oberflächen.</p><a href="https://react.dev/learn" target="_blank" rel="noreferrer">Docs</a></article>
-              <article class="tech-card"><img class="tech-logo" src="./assets/svg/tech/vite.svg" alt="Vite Logo" /><h3>Vite</h3><p>Schneller Build-Workflow für Development und Deploy.</p><a href="https://vite.dev/guide/" target="_blank" rel="noreferrer">Docs</a></article>
-              <article class="tech-card"><img class="tech-logo" src="./assets/svg/tech/nextjs.svg" alt="Next.js Logo" /><h3>Next.js</h3><p>Framework für SSR, Routing und produktive Web-Apps.</p><a href="https://nextjs.org/docs" target="_blank" rel="noreferrer">Docs</a></article>
+              <article class="tech-card"><img class="tech-logo" src="/assets/svg/tech/html5.svg" alt="HTML5 Logo" /><h3>HTML5</h3><p>Struktur und Semantik für performante Webseiten.</p><a href="https://html.spec.whatwg.org/" target="_blank" rel="noreferrer">Docs</a></article>
+              <article class="tech-card"><img class="tech-logo" src="/assets/svg/tech/css.svg" alt="CSS3 Logo" /><h3>CSS3</h3><p>Modernes Layout, Grid-Systeme und visuelles System.</p><a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank" rel="noreferrer">Docs</a></article>
+              <article class="tech-card"><img class="tech-logo" src="/assets/svg/tech/javascript.svg" alt="JavaScript Logo" /><h3>JavaScript</h3><p>Interaktive Logik für Komponenten und Nutzerfluss.</p><a href="https://tc39.es/ecma262/" target="_blank" rel="noreferrer">Docs</a></article>
+              <article class="tech-card"><img class="tech-logo" src="/assets/svg/tech/react.svg" alt="React Logo" /><h3>React</h3><p>Komponentenbasierte UI für skalierbare Oberflächen.</p><a href="https://react.dev/learn" target="_blank" rel="noreferrer">Docs</a></article>
+              <article class="tech-card"><img class="tech-logo" src="/assets/svg/tech/vite.svg" alt="Vite Logo" /><h3>Vite</h3><p>Schneller Build-Workflow für Development und Deploy.</p><a href="https://vite.dev/guide/" target="_blank" rel="noreferrer">Docs</a></article>
+              <article class="tech-card"><img class="tech-logo" src="/assets/svg/tech/nextjs.svg" alt="Next.js Logo" /><h3>Next.js</h3><p>Framework für SSR, Routing und produktive Web-Apps.</p><a href="https://nextjs.org/docs" target="_blank" rel="noreferrer">Docs</a></article>
             </div>
           </section>
 
           <section class="stack-section reveal in" aria-labelledby="backend-head">
             <h2 id="backend-head" class="stack-section-title">Backend</h2>
             <div class="stack-grid">
-              <article class="tech-card"><img class="tech-logo" src="./assets/svg/tech/nodejs.svg" alt="Node.js Logo" /><h3>Node.js</h3><p>Server-Runtime für APIs, Services und Automationen.</p><a href="https://nodejs.org/docs/latest/api/" target="_blank" rel="noreferrer">Docs</a></article>
-              <article class="tech-card"><img class="tech-logo" src="./assets/svg/tech/express.svg" alt="Express Logo" /><h3>Express</h3><p>Leichtes Framework für REST- und Backend-Routen.</p><a href="https://expressjs.com/en/starter/installing.html" target="_blank" rel="noreferrer">Docs</a></article>
-              <article class="tech-card"><img class="tech-logo" src="./assets/svg/tech/firebase.svg" alt="Firebase Logo" /><h3>Firebase Functions</h3><p>Serverless Backend-Logik für Event- und API-Flows.</p><a href="https://firebase.google.com/docs/functions" target="_blank" rel="noreferrer">Docs</a></article>
-              <article class="tech-card"><img class="tech-logo" src="./assets/svg/tech/supabase.svg" alt="Supabase Logo" /><h3>Supabase</h3><p>Backend-as-a-Service für Auth, Daten und APIs.</p><a href="https://supabase.com/docs" target="_blank" rel="noreferrer">Docs</a></article>
-              <article class="tech-card"><img class="tech-logo" src="./assets/svg/tech/redis.svg" alt="Redis Logo" /><h3>Redis</h3><p>In-Memory Store für Caching und schnelle States.</p><a href="https://redis.io/docs/latest/" target="_blank" rel="noreferrer">Docs</a></article>
+              <article class="tech-card"><img class="tech-logo" src="/assets/svg/tech/nodejs.svg" alt="Node.js Logo" /><h3>Node.js</h3><p>Server-Runtime für APIs, Services und Automationen.</p><a href="https://nodejs.org/docs/latest/api/" target="_blank" rel="noreferrer">Docs</a></article>
+              <article class="tech-card"><img class="tech-logo" src="/assets/svg/tech/express.svg" alt="Express Logo" /><h3>Express</h3><p>Leichtes Framework für REST- und Backend-Routen.</p><a href="https://expressjs.com/en/starter/installing.html" target="_blank" rel="noreferrer">Docs</a></article>
+              <article class="tech-card"><img class="tech-logo" src="/assets/svg/tech/firebase.svg" alt="Firebase Logo" /><h3>Firebase Functions</h3><p>Serverless Backend-Logik für Event- und API-Flows.</p><a href="https://firebase.google.com/docs/functions" target="_blank" rel="noreferrer">Docs</a></article>
+              <article class="tech-card"><img class="tech-logo" src="/assets/svg/tech/supabase.svg" alt="Supabase Logo" /><h3>Supabase</h3><p>Backend-as-a-Service für Auth, Daten und APIs.</p><a href="https://supabase.com/docs" target="_blank" rel="noreferrer">Docs</a></article>
+              <article class="tech-card"><img class="tech-logo" src="/assets/svg/tech/redis.svg" alt="Redis Logo" /><h3>Redis</h3><p>In-Memory Store für Caching und schnelle States.</p><a href="https://redis.io/docs/latest/" target="_blank" rel="noreferrer">Docs</a></article>
             </div>
           </section>
 
           <section class="stack-section reveal in" aria-labelledby="database-head">
             <h2 id="database-head" class="stack-section-title">Datenbank</h2>
             <div class="stack-grid">
-              <article class="tech-card"><img class="tech-logo" src="./assets/svg/tech/postgresql.svg" alt="PostgreSQL Logo" /><h3>PostgreSQL</h3><p>Relationale Datenbasis für robuste Produktdaten.</p><a href="https://www.postgresql.org/docs/" target="_blank" rel="noreferrer">Docs</a></article>
-              <article class="tech-card"><img class="tech-logo" src="./assets/svg/tech/supabase.svg" alt="Supabase Logo" /><h3>Supabase</h3><p>Postgres-basiertes Datenmodell mit moderner API.</p><a href="https://supabase.com/docs" target="_blank" rel="noreferrer">Docs</a></article>
-              <article class="tech-card"><img class="tech-logo" src="./assets/svg/tech/firebase.svg" alt="Firebase Logo" /><h3>Firebase</h3><p>Realtime-Daten und schnelle Produkt-Prototypen.</p><a href="https://firebase.google.com/docs" target="_blank" rel="noreferrer">Docs</a></article>
+              <article class="tech-card"><img class="tech-logo" src="/assets/svg/tech/postgresql.svg" alt="PostgreSQL Logo" /><h3>PostgreSQL</h3><p>Relationale Datenbasis für robuste Produktdaten.</p><a href="https://www.postgresql.org/docs/" target="_blank" rel="noreferrer">Docs</a></article>
+              <article class="tech-card"><img class="tech-logo" src="/assets/svg/tech/supabase.svg" alt="Supabase Logo" /><h3>Supabase</h3><p>Postgres-basiertes Datenmodell mit moderner API.</p><a href="https://supabase.com/docs" target="_blank" rel="noreferrer">Docs</a></article>
+              <article class="tech-card"><img class="tech-logo" src="/assets/svg/tech/firebase.svg" alt="Firebase Logo" /><h3>Firebase</h3><p>Realtime-Daten und schnelle Produkt-Prototypen.</p><a href="https://firebase.google.com/docs" target="_blank" rel="noreferrer">Docs</a></article>
             </div>
           </section>
 
           <section class="stack-section reveal in" aria-labelledby="deploy-head">
             <h2 id="deploy-head" class="stack-section-title">Deployment</h2>
             <div class="stack-grid">
-              <article class="tech-card"><img class="tech-logo" src="./assets/svg/tech/vercel.svg" alt="Vercel Logo" /><h3>Vercel</h3><p>Hosting, Preview-Deploys und Analytics im Workflow.</p><a href="https://vercel.com/docs" target="_blank" rel="noreferrer">Docs</a></article>
-              <article class="tech-card"><img class="tech-logo" src="./assets/svg/tech/cloudflare.svg" alt="Cloudflare Logo" /><h3>Cloudflare</h3><p>DNS, Security-Layer und globale Performance.</p><a href="https://developers.cloudflare.com/" target="_blank" rel="noreferrer">Docs</a></article>
-              <article class="tech-card"><img class="tech-logo" src="./assets/svg/tech/github.svg" alt="GitHub Logo" /><h3>GitHub</h3><p>Versionierung, Kollaboration und Code-Review.</p><a href="https://docs.github.com/en" target="_blank" rel="noreferrer">Docs</a></article>
-              <article class="tech-card"><img class="tech-logo" src="./assets/svg/tech/githubactions.svg" alt="GitHub Actions Logo" /><h3>GitHub Actions</h3><p>CI/CD Pipelines für Build, Test und Deploy.</p><a href="https://docs.github.com/en/actions" target="_blank" rel="noreferrer">Docs</a></article>
+              <article class="tech-card"><img class="tech-logo" src="/assets/svg/tech/vercel.svg" alt="Vercel Logo" /><h3>Vercel</h3><p>Hosting, Preview-Deploys und Analytics im Workflow.</p><a href="https://vercel.com/docs" target="_blank" rel="noreferrer">Docs</a></article>
+              <article class="tech-card"><img class="tech-logo" src="/assets/svg/tech/cloudflare.svg" alt="Cloudflare Logo" /><h3>Cloudflare</h3><p>DNS, Security-Layer und globale Performance.</p><a href="https://developers.cloudflare.com/" target="_blank" rel="noreferrer">Docs</a></article>
+              <article class="tech-card"><img class="tech-logo" src="/assets/svg/tech/github.svg" alt="GitHub Logo" /><h3>GitHub</h3><p>Versionierung, Kollaboration und Code-Review.</p><a href="https://docs.github.com/en" target="_blank" rel="noreferrer">Docs</a></article>
+              <article class="tech-card"><img class="tech-logo" src="/assets/svg/tech/githubactions.svg" alt="GitHub Actions Logo" /><h3>GitHub Actions</h3><p>CI/CD Pipelines für Build, Test und Deploy.</p><a href="https://docs.github.com/en/actions" target="_blank" rel="noreferrer">Docs</a></article>
             </div>
           </section>
 
           <section class="stack-section reveal in" aria-labelledby="tools-head">
             <h2 id="tools-head" class="stack-section-title">Tools</h2>
             <div class="stack-grid">
-              <article class="tech-card"><img class="tech-logo" src="./assets/svg/tech/vscode.svg" alt="Visual Studio Code Logo" /><h3>Visual Studio Code</h3><p>Schneller Editor für tägliche Entwicklung.</p><a href="https://code.visualstudio.com/docs" target="_blank" rel="noreferrer">Docs</a></article>
-              <article class="tech-card"><img class="tech-logo" src="./assets/svg/tech/firebase.svg" alt="Firebase Studio Logo" /><h3>Firebase Studio</h3><p>Produktive Firebase-Workflows und Backend-Setup.</p><a href="https://firebase.google.com/docs/studio" target="_blank" rel="noreferrer">Docs</a></article>
-              <article class="tech-card"><img class="tech-logo" src="./assets/svg/tech/jetbrains.svg" alt="JetBrains Logo" /><h3>JetBrains IDEs</h3><p>Starke IDEs für strukturierte Entwicklung.</p><a href="https://www.jetbrains.com/help/" target="_blank" rel="noreferrer">Docs</a></article>
+              <article class="tech-card"><img class="tech-logo" src="/assets/svg/tech/vscode.svg" alt="Visual Studio Code Logo" /><h3>Visual Studio Code</h3><p>Schneller Editor für tägliche Entwicklung.</p><a href="https://code.visualstudio.com/docs" target="_blank" rel="noreferrer">Docs</a></article>
+              <article class="tech-card"><img class="tech-logo" src="/assets/svg/tech/firebase.svg" alt="Firebase Studio Logo" /><h3>Firebase Studio</h3><p>Produktive Firebase-Workflows und Backend-Setup.</p><a href="https://firebase.google.com/docs/studio" target="_blank" rel="noreferrer">Docs</a></article>
+              <article class="tech-card"><img class="tech-logo" src="/assets/svg/tech/jetbrains.svg" alt="JetBrains Logo" /><h3>JetBrains IDEs</h3><p>Starke IDEs für strukturierte Entwicklung.</p><a href="https://www.jetbrains.com/help/" target="_blank" rel="noreferrer">Docs</a></article>
             </div>
           </section>
         </div>
@@ -107,3 +108,13 @@
     <script type="module" src="./assets/scripts/legal-consent.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+

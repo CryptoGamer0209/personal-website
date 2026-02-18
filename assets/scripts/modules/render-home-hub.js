@@ -11,12 +11,12 @@ export function renderHomeHub() {
         </header>
 
         <div class="hub-grid">
-          <a class="hub-card reveal" href="./portfolio.html">
+          <a class="hub-card reveal" href="/portfolio.html">
             <p class="kicker">Projects</p>
             <h3>Portfolio Seite</h3>
             <p class="project-meta">Alle Referenzen, Tech-Stacks und Projektkarten auf einer separaten Unterseite.</p>
           </a>
-          <a class="hub-card reveal" href="./linktree.html">
+          <a class="hub-card reveal" href="/linktree.html">
             <p class="kicker">Socials</p>
             <h3>Linktree Seite</h3>
             <p class="project-meta">Alle Plattformen, Kontaktwege und externen Links als eigener Bereich.</p>
@@ -26,3 +26,4 @@ export function renderHomeHub() {
     </section>
   `;
 }
+

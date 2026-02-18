@@ -29,7 +29,7 @@ function openBanner() {
     <p class="cookie-text">
       Diese Website verwendet Vercel Analytics sowie technisch notwendige lokale Speicherungen
       für deine Cookie-Auswahl. Details findest du in der
-      <a href="./datenschutz.html">Datenschutzerklärung</a>.
+      <a href="/datenschutz.html">Datenschutzerklärung</a>.
     </p>
     <div class="cookie-actions">
       <button class="cookie-btn secondary" type="button" data-cookie-action="deny">Schliessen</button>
@@ -66,3 +66,4 @@ document.addEventListener("click", (event) => {
     openBanner();
   }
 });
+

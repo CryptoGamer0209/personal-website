@@ -1,12 +1,12 @@
 function resolveNavKey(pathname) {
   const path = pathname.toLowerCase();
-  if (path === "/" || path.endsWith("/index.html")) return "home";
-  if (path.endsWith("/portfolio.html")) return "portfolio";
-  if (path.endsWith("/linktree.html")) return "linktree";
-  if (path.endsWith("/stacks.html")) return "stacks";
-  if (path.endsWith("/styleguide.html")) return "styleguide";
-  if (path.endsWith("/impressum.html")) return "home";
-  if (path.endsWith("/datenschutz.html")) return "home";
+  if (path === "/" || path.endsWith("/index") || path.endsWith("/index.html")) return "home";
+  if (path.endsWith("/portfolio") || path.endsWith("/portfolio.html")) return "portfolio";
+  if (path.endsWith("/links") || path.endsWith("/linktree") || path.endsWith("/linktree.html")) return "linktree";
+  if (path.endsWith("/stacks") || path.endsWith("/stacks.html")) return "stacks";
+  if (path.endsWith("/styleguide") || path.endsWith("/styleguide.html")) return "styleguide";
+  if (path.endsWith("/impressum") || path.endsWith("/impressum.html")) return "home";
+  if (path.endsWith("/datenschutz") || path.endsWith("/datenschutz.html")) return "home";
   return "home";
 }
 

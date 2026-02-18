@@ -1,4 +1,5 @@
 import { setActiveNavByPath } from "./nav-active.js";
+import { initMobileNav } from "./nav-menu.js";
 import {
   renderHomePage,
   renderPortfolioPage,
@@ -7,12 +8,20 @@ import {
   preloadRouteAssets
 } from "./page-renderers.js";
 
+initMobileNav();
+
 const ROUTES = {
   "/": { key: "home", title: "Personal Website", render: () => renderHomePage() },
+  "/index": { key: "home", title: "Personal Website", render: () => renderHomePage() },
   "/index.html": { key: "home", title: "Personal Website", render: () => renderHomePage() },
+  "/portfolio": { key: "portfolio", title: "Portfolio | Niko Vehrens", render: () => renderPortfolioPage() },
   "/portfolio.html": { key: "portfolio", title: "Portfolio | Niko Vehrens", render: () => renderPortfolioPage() },
+  "/links": { key: "linktree", title: "Links | Niko Vehrens", render: () => renderLinksPage() },
+  "/linktree": { key: "linktree", title: "Links | Niko Vehrens", render: () => renderLinksPage() },
   "/linktree.html": { key: "linktree", title: "Links | Niko Vehrens", render: () => renderLinksPage() },
+  "/stacks": { key: "stacks", title: "Stacks | Niko Vehrens", render: () => renderStaticPage("stacks.html") },
   "/stacks.html": { key: "stacks", title: "Stacks | Niko Vehrens", render: () => renderStaticPage("stacks.html") },
+  "/styleguide": { key: "styleguide", title: "Styleguide | Niko Vehrens", render: () => renderStaticPage("styleguide.html") },
   "/styleguide.html": { key: "styleguide", title: "Styleguide | Niko Vehrens", render: () => renderStaticPage("styleguide.html") }
 };
 
@@ -30,7 +39,8 @@ function isSpaRoute(pathname) {
 }
 
 function updateHomeBodyMode(pathname) {
-  const isHome = normalizePath(pathname) === "/" || normalizePath(pathname) === "/index.html";
+  const normalized = normalizePath(pathname);
+  const isHome = normalized === "/" || normalized === "/index" || normalized === "/index.html";
   document.body.classList.toggle("home-page", isHome);
 }
 
@@ -74,10 +84,10 @@ await renderRoute(window.location.pathname);
 
 function scheduleIdlePrefetch() {
   const task = () => {
-    preloadRouteAssets("/portfolio.html").catch(() => {});
-    preloadRouteAssets("/linktree.html").catch(() => {});
-    preloadRouteAssets("/stacks.html").catch(() => {});
-    preloadRouteAssets("/styleguide.html").catch(() => {});
+    preloadRouteAssets("/portfolio").catch(() => {});
+    preloadRouteAssets("/links").catch(() => {});
+    preloadRouteAssets("/stacks").catch(() => {});
+    preloadRouteAssets("/styleguide").catch(() => {});
   };
 
   if ("requestIdleCallback" in window) {
