@@ -7,7 +7,7 @@
     <title>Personal Website</title>
     <meta
       name="description"
-      content="Persoenliche Website mit Portfolio und Linktree in modernem, dunklem Design."
+      content="Persönliche Website mit Portfolio und Links in modernem, dunklem Design."
     />
 
     <!-- Schriftarten -->
@@ -28,7 +28,7 @@
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
   </head>
-  <body>
+  <body class="home-page">
     <!-- Dekorativer Hintergrund -->
     <div class="site-bg" aria-hidden="true"></div>
 
@@ -37,19 +37,22 @@
       <nav class="nav-wrap container">
         <a class="brand" href="./index.html">NV</a>
         <div class="nav-links">
-          <a href="./portfolio.html">Portfolio</a>
-          <a href="./linktree.html">Links</a>
-          <a href="#kontakt">Kontakt</a>
+          <a data-nav-item="home" href="./index.html">Home</a>
+          <a data-nav-item="portfolio" href="./portfolio.html">Portfolio</a>
+          <a data-nav-item="linktree" href="./linktree.html">Links</a>
+          <a data-nav-item="stacks" href="./stacks.html">Stacks</a>
+          <a data-nav-item="styleguide" href="./styleguide.html">Styleguide</a>
         </div>
       </nav>
     </header>
 
     <!-- Hauptinhalt wird per JavaScript modular gerendert -->
     <main id="app"></main>
+    <div id="global-legal-bar"></div>
 
     <!-- Einwilligungs- und Analytics-Logik -->
+    <script type="module" src="./assets/scripts/persistent-footer.js"></script>
+    <script type="module" src="./assets/scripts/spa-router.js"></script>
     <script type="module" src="./assets/scripts/legal-consent.js"></script>
-    <!-- Einstiegsskript der Startseite -->
-    <script type="module" src="./assets/scripts/main.js"></script>
   </body>
 </html>

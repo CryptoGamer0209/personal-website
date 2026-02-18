@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Personal Website",
+    "description": "Modulare statische Website mit SPA-Navigation, Legal-Leiste und JSON-Content.",
+    "stack": ["HTML5", "CSS3", "JavaScript", "Vercel", "Vercel Analytics"],
+    "url": "https://github.com/CryptoGamer0209/personal-website"
+  },
+  {
+    "title": "Clock Backend",
+    "description": "REST- und WebSocket-Backend für das Uhrsystem mit optionalem Redis-Storage.",
+    "stack": ["Node.js", "Express", "WebSocket", "Redis", "CORS"],
+    "url": "https://github.com/CryptoGamer0209/clock-backend"
+  },
+  {
+    "title": "Clock Frontend",
+    "description": "React-Frontend für das Uhrsystem mit Dashboard, Routing und animierter UI.",
+    "stack": ["React", "TypeScript", "Vite", "React Router", "Tailwind CSS", "Radix UI", "Motion", "Lucide", "React Hook Form", "Recharts"],
+    "url": "https://github.com/CryptoGamer0209/clock-frontend"
+  }
+]

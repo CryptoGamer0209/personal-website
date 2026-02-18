@@ -1,23 +1,77 @@
 ﻿# Personal Site
 
-Modulare persoenliche Website mit separaten Unterseiten fuer Portfolio und Linktree.
+Modulare persönliche Website mit separaten Unterseiten für Portfolio und Links.
 
 ## Seiten
 - `index.html` - Startseite mit Hero + Navigation zu den Unterseiten
 - `portfolio.html` - Portfolio Unterseite
-- `linktree.html` - Linktree Unterseite
+- `linktree.html` - Links Unterseite
 - `impressum.html` - Impressum
-- `datenschutz.html` - Datenschutzerklaerung
+- `datenschutz.html` - Datenschutzerklärung
 
 ## Struktur
-- `assets/data/site-content.js` - alle Inhalte zentral
+- `assets/data/site-content.js` - Home-Inhalte (Profil + Stats)
+- `assets/data/portfolio.json` - Portfolio-Inhalte
+- `assets/data/links.json` - Links-Inhalte
 - `assets/scripts/legal-consent.js` - Cookie-Hinweis + Einstellungen
-- `assets/scripts/main.js` - Startseite
-- `assets/scripts/portfolio-page.js` - Portfolio Seite
-- `assets/scripts/linktree-page.js` - Linktree Seite
+- `assets/scripts/spa-router.js` - statisches SPA-Routing (laedt nur Main-Inhalt neu)
+- `assets/scripts/persistent-footer.js` - persistente Legal-Leiste
 - `assets/scripts/modules/` - wiederverwendbare Renderer + Utilities
 - `assets/styles/` - Basis + Komponentenstyles
 - `vercel.json` - Vercel Konfiguration
+
+## JSON-Format und Pflege
+Die Unterseiten `Portfolio` und `Links` lesen ihre Inhalte direkt aus JSON-Dateien.
+
+### `assets/data/portfolio.json`
+Array aus Projekt-Objekten:
+
+```json
+[
+  {
+    "title": "Projektname",
+    "description": "Kurze Beschreibung",
+    "stack": ["React", "TypeScript", "Supabase"],
+    "url": "https://dein-link.tld"
+  }
+]
+```
+
+- `title`: Überschrift der Projektkarte
+- `description`: Beschreibungstext
+- `stack`: Tags unter dem Projekt
+- `url`: Ziel von `Projekt ansehen ->`
+
+Was ändern für welchen Effekt:
+- Neues Projekt hinzufügen: neues Objekt im Array ergänzen
+- Reihenfolge ändern: Objekte im Array verschieben
+- Link deaktivieren: `url` auf `"#"` setzen
+
+### `assets/data/links.json`
+Array aus Link-Objekten:
+
+```json
+[
+  {
+    "label": "GitHub",
+    "value": "github.com/deinname",
+    "url": "https://github.com/deinname"
+  }
+]
+```
+
+- `label`: Name der Plattform
+- `value`: sichtbarer Untertext
+- `url`: Ziel-URL der Karte
+
+Was ändern für welchen Effekt:
+- Neuen Link hinzufügen: neues Objekt im Array ergänzen
+- Reihenfolge ändern: Objekte verschieben
+- Link entfernen: Objekt löschen
+
+Hinweise:
+- JSON erlaubt keine Kommentare und kein Komma nach dem letzten Feld.
+- Nach Änderungen Seite mit `Ctrl+F5` neu laden, falls alte Daten aus dem Cache angezeigt werden.
 
 ## Lokal starten
 Im Ordner `personal-website`:
@@ -32,9 +86,9 @@ Im Ordner `personal-website`:
 ## Vercel Deployment
 1. Projekt bei Vercel importieren.
 2. Root Directory auf `personal-website` setzen.
-3. Deploy ausfuehren.
+3. Deploy ausführen.
 4. Domains `nikovehrens.de` und `www.nikovehrens.de` im Vercel Domain-Bereich hinterlegen.
-5. Fuer Subdomains in Vercel einen Wildcard-Eintrag `*.nikovehrens.de` konfigurieren und DNS entsprechend setzen.
+5. Für Subdomains in Vercel einen Wildcard-Eintrag `*.nikovehrens.de` konfigurieren und DNS entsprechend setzen.
 
 ## Wichtiger Rechtshinweis
-Ohne vollstaendige ladungsfaehige Anschrift (Strasse + Hausnummer) ist das Impressum in Deutschland in der Regel nicht vollstaendig.
+Ohne vollständige ladungsfähige Anschrift (Straße + Hausnummer) ist das Impressum in Deutschland in der Regel nicht vollständig.

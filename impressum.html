@@ -34,10 +34,11 @@
       <nav class="nav-wrap container">
         <a class="brand" href="./index.html">NV</a>
         <div class="nav-links">
-          <a href="./portfolio.html">Portfolio</a>
-          <a href="./linktree.html">Links</a>
-          <a href="./impressum.html">Impressum</a>
-          <a href="./datenschutz.html">Datenschutz</a>
+          <a data-nav-item="home" href="./index.html">Home</a>
+          <a data-nav-item="portfolio" href="./portfolio.html">Portfolio</a>
+          <a data-nav-item="linktree" href="./linktree.html">Links</a>
+          <a data-nav-item="stacks" href="./stacks.html">Stacks</a>
+          <a data-nav-item="styleguide" href="./styleguide.html">Styleguide</a>
         </div>
       </nav>
     </header>
@@ -48,13 +49,13 @@
           <article class="legal-card reveal in">
             <h1 class="section-title">Impressum</h1>
             <p class="section-sub">
-              Angaben gemaess § 5 DDG und § 18 Abs. 2 MStV.
+              Angaben gemäß § 5 DDG und § 18 Abs. 2 MStV.
             </p>
 
             <h2>1. Diensteanbieter</h2>
             <p>
               <strong>Niko Vehrens</strong><br />
-              23843 Travenbrueck<br />
+              23843 Travenbrück<br />
               Deutschland
             </p>
 
@@ -73,7 +74,7 @@
             <h2>5. Umsatzsteuer-ID / Wirtschafts-ID</h2>
             <p>Keine Umsatzsteuer-ID und keine Wirtschafts-ID vorhanden.</p>
 
-            <h2>6. Verantwortlich fuer den Inhalt nach § 18 Abs. 2 MStV</h2>
+            <h2>6. Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
             <p>
               Niko Vehrens<br />
               Anschrift wie oben.
@@ -88,7 +89,10 @@
         </div>
       </section>
     </main>
+    <div id="global-legal-bar"></div>
 
+    <script type="module" src="./assets/scripts/persistent-footer.js"></script>
+    <script type="module" src="./assets/scripts/spa-router.js"></script>
     <script type="module" src="./assets/scripts/legal-consent.js"></script>
   </body>
 </html>

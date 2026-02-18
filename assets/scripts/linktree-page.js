@@ -6,7 +6,7 @@ import { initReveal } from "./modules/init-reveal.js";
 // Root-Container der Seite.
 const app = document.querySelector("#app");
 
-// Harte Absicherung, falls die HTML-Struktur geaendert wurde.
+// Harte Absicherung, falls die HTML-Struktur geändert wurde.
 if (!app) {
   throw new Error("#app container not found");
 }

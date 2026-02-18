@@ -13,6 +13,6 @@ export function initReveal() {
     { threshold: 0.16 }
   );
 
-  // Alle Kandidaten fuer die Reveal-Animation registrieren.
+  // Alle Kandidaten für die Reveal-Animation registrieren.
   document.querySelectorAll(".reveal").forEach((node) => observer.observe(node));
 }

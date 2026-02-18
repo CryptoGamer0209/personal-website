@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Datenschutz | Niko Vehrens</title>
-    <meta name="description" content="Datenschutzerklaerung fuer nikovehrens.de." />
+    <meta name="description" content="Datenschutzerklärung für nikovehrens.de." />
 
     <!-- Schriftarten -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,10 +32,11 @@
       <nav class="nav-wrap container">
         <a class="brand" href="./index.html">NV</a>
         <div class="nav-links">
-          <a href="./portfolio.html">Portfolio</a>
-          <a href="./linktree.html">Links</a>
-          <a href="./impressum.html">Impressum</a>
-          <a href="./datenschutz.html">Datenschutz</a>
+          <a data-nav-item="home" href="./index.html">Home</a>
+          <a data-nav-item="portfolio" href="./portfolio.html">Portfolio</a>
+          <a data-nav-item="linktree" href="./linktree.html">Links</a>
+          <a data-nav-item="stacks" href="./stacks.html">Stacks</a>
+          <a data-nav-item="styleguide" href="./styleguide.html">Styleguide</a>
         </div>
       </nav>
     </header>
@@ -44,13 +45,13 @@
       <section class="section">
         <div class="container">
           <article class="legal-card reveal in">
-            <h1 class="section-title">Datenschutzerklaerung</h1>
+            <h1 class="section-title">Datenschutzerklärung</h1>
             <p class="section-sub">Stand: 17. Februar 2026</p>
 
             <h2>1. Verantwortlicher</h2>
             <p>
               Niko Vehrens<br />
-              23843 Travenbrueck<br />
+              23843 Travenbrück<br />
               Deutschland<br />
               E-Mail:
               <a class="footer-mail" href="mailto:legal@nikovehrens.de">legal@nikovehrens.de</a>
@@ -66,7 +67,7 @@
             <h2>3. Server-Logfiles</h2>
             <p>
               Beim rein informatorischen Besuch der Website werden automatisch Daten erfasst,
-              die dein Browser uebermittelt. Diese Verarbeitung ist technisch erforderlich,
+              die dein Browser übermittelt. Diese Verarbeitung ist technisch erforderlich,
               um die Website stabil und sicher bereitzustellen.
             </p>
 
@@ -74,13 +75,13 @@
             <p>
               Die Website speichert im Browser nur deine Auswahl zum Cookie-Hinweis
               ("accepted" oder "denied"). Diese Speicherung ist technisch erforderlich,
-              damit deine Entscheidung beim naechsten Besuch erhalten bleibt.
+              damit deine Entscheidung beim nächsten Besuch erhalten bleibt.
             </p>
 
             <h2>5. Vercel Analytics</h2>
             <p>
-              Fuer Reichweitenmessung wird Vercel Analytics verwendet. Die Verarbeitung erfolgt
-              ueber Vercel. Es werden aggregierte Nutzungsdaten zur Auswertung der Performance
+              Für Reichweitenmessung wird Vercel Analytics verwendet. Die Verarbeitung erfolgt
+              über Vercel. Es werden aggregierte Nutzungsdaten zur Auswertung der Performance
               der Website erhoben.
             </p>
             <p>
@@ -91,8 +92,8 @@
 
             <h2>6. Deine Rechte</h2>
             <p>
-              Du hast insbesondere Rechte auf Auskunft, Berichtigung, Loeschung,
-              Einschraenkung der Verarbeitung sowie Widerspruch nach Massgabe der DSGVO.
+              Du hast insbesondere Rechte auf Auskunft, Berichtigung, Löschung,
+              Einschränkung der Verarbeitung sowie Widerspruch nach Maßgabe der DSGVO.
             </p>
 
             <h2>7. Kontakt zu Datenschutzfragen</h2>
@@ -109,7 +110,10 @@
         </div>
       </section>
     </main>
+    <div id="global-legal-bar"></div>
 
+    <script type="module" src="./assets/scripts/persistent-footer.js"></script>
+    <script type="module" src="./assets/scripts/spa-router.js"></script>
     <script type="module" src="./assets/scripts/legal-consent.js"></script>
   </body>
 </html>

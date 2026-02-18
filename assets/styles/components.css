@@ -6,7 +6,21 @@
   align-items: stretch;
 }
 
-/* Gemeinsamer Karten-Look fuer alle Panels */
+/* Startseitenlayout: Hero zwischen Header und Legal-Leiste einpassen */
+.home-page #app {
+  min-height: calc(100svh - 72px);
+  display: flex;
+  flex-direction: column;
+}
+
+.home-page #app .section:first-child {
+  flex: 1;
+  display: grid;
+  align-items: center;
+  padding: 28px 0 86px;
+}
+
+/* Gemeinsamer Karten-Look für alle Panels */
 .hero-card,
 .panel,
 .project-card,
@@ -20,12 +34,17 @@
   box-shadow: var(--shadow);
 }
 
-/* Groessere Innenabstaende in der Hero-Karte */
+/* Größere Innenabstände in der Hero-Karte */
 .hero-card {
   padding: 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
-/* Kleine Bereichs-Ueberschrift (z. B. Personal Website) */
+/* Kleine Bereichs-Überschrift (z. B. Personal Website) */
 .kicker {
   color: var(--accent);
   font-weight: 700;
@@ -64,7 +83,7 @@ h3 {
   flex-wrap: wrap;
 }
 
-/* Basisstil fuer Buttons */
+/* Basisstil für Buttons */
 .btn {
   border-radius: 999px;
   border: 1px solid var(--line);
@@ -93,6 +112,16 @@ h3 {
   border-radius: var(--radius-md);
 }
 
+.panel-link {
+  display: block;
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.panel-link:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-soft);
+}
+
 /* Label in den Stat-Panels */
 .panel-label {
   color: var(--text-soft);
@@ -109,7 +138,17 @@ h3 {
   font-size: 1.25rem;
 }
 
-/* Ueberschriftenblock fuer Sektionen */
+.panel-link-only .panel-value {
+  margin: 0;
+  line-height: 1.1;
+}
+
+.panel-link-only {
+  display: flex;
+  align-items: center;
+}
+
+/* Überschriftenblock für Sektionen */
 .section-head {
   display: flex;
   justify-content: space-between;
@@ -142,14 +181,14 @@ h3 {
   border-radius: var(--radius-md);
 }
 
-/* Sekundaerer Text in Karten */
+/* Sekundärer Text in Karten */
 .project-meta {
   margin-top: 8px;
   color: var(--text-soft);
   font-size: 0.95rem;
 }
 
-/* Tag-Liste fuer Tech-Stack */
+/* Tag-Liste für Tech-Stack */
 .stack-list {
   margin-top: 16px;
   display: flex;
@@ -174,7 +213,7 @@ h3 {
   color: var(--accent);
 }
 
-/* Gemeinsames Grid fuer Linktree und Hub */
+/* Gemeinsames Grid für Linktree und Hub */
 .linktree-grid,
 .hub-grid {
   display: grid;
@@ -182,7 +221,7 @@ h3 {
   gap: 12px;
 }
 
-/* Kachelstil fuer Links und Hub-Karten */
+/* Kachelstil für Links und Hub-Karten */
 .link-card,
 .hub-card {
   border-radius: var(--radius-md);
@@ -201,7 +240,7 @@ h3 {
   min-height: 170px;
 }
 
-/* Kleiner Hover-Lift fuer Interaktivitaet */
+/* Kleiner Hover-Lift für Interaktivität */
 .link-card:hover,
 .hub-card:hover {
   transform: translateY(-2px);
@@ -239,7 +278,7 @@ h3 {
   border-bottom-color: var(--accent-soft);
 }
 
-/* Button im Link-Stil fuer Cookie-Einstellungen */
+/* Button im Link-Stil für Cookie-Einstellungen */
 .legal-inline-button {
   appearance: none;
   border: 0;
@@ -256,7 +295,204 @@ h3 {
   border-bottom-color: var(--accent-soft);
 }
 
-/* Layout fuer Impressum und Datenschutz */
+/* Feste Legal-Leiste am unteren Seitenrand */
+.home-legal-bar-wrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: 1px solid var(--line);
+  background: rgba(5, 5, 5, 0.8);
+  backdrop-filter: blur(8px);
+  z-index: 25;
+}
+
+/* Platz für die fixe Leiste auf allen Unterseiten */
+body:not(.home-page) main {
+  padding-bottom: 68px;
+}
+
+.home-legal-links {
+  margin: 0;
+  min-height: 54px;
+}
+
+/* Stacks-Seite */
+.stack-page .section {
+  padding-top: 54px;
+}
+
+.stack-section {
+  margin-top: 22px;
+}
+
+.stack-section-title {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.tech-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tech-logo {
+  width: 34px;
+  height: 34px;
+}
+
+.tech-card h3 {
+  font-size: 1rem;
+}
+
+.tech-card p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.93rem;
+}
+
+.tech-card a {
+  margin-top: auto;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+/* Styleguide-Seite */
+.styleguide-hero {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 26px;
+  background:
+    radial-gradient(circle at 82% 20%, rgba(255, 122, 26, 0.18), transparent 36%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+  box-shadow: var(--shadow);
+}
+
+.styleguide-grid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.style-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+}
+
+.style-block {
+  margin-top: 16px;
+}
+
+.style-card h2 {
+  font-size: 1.05rem;
+}
+
+.style-card p {
+  margin: 8px 0 0;
+  color: var(--text-soft);
+}
+
+.style-copy {
+  max-width: 68ch;
+}
+
+.swatch-grid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.swatch {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.14);
+}
+
+.swatch p {
+  margin: 8px 0 0;
+  font-size: 0.83rem;
+}
+
+.swatch-chip {
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+}
+
+.swatch-bg-main {
+  background: #050505;
+}
+
+.swatch-bg-surface {
+  background: #0d0d0d;
+}
+
+.swatch-text-main {
+  background: #f3f3f3;
+}
+
+.swatch-accent {
+  background: #ff7a1a;
+}
+
+.type-showcase {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.type-item {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px;
+  background: rgba(0, 0, 0, 0.14);
+}
+
+.type-label {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.type-title {
+  margin: 6px 0 0;
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.type-demo-head {
+  margin: 10px 0 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.4rem;
+  color: var(--text-main);
+}
+
+.type-demo-body {
+  margin: 10px 0 0;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
+
+/* Layout für Impressum und Datenschutz */
 .legal-card {
   padding: 28px;
 }
@@ -340,7 +576,14 @@ h3 {
   .hero-grid,
   .portfolio-grid,
   .linktree-grid,
-  .hub-grid {
+  .hub-grid,
+  .stack-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .styleguide-grid,
+  .swatch-grid,
+  .type-showcase {
     grid-template-columns: 1fr;
   }
 
@@ -355,5 +598,15 @@ h3 {
   .cookie-banner {
     right: 12px;
     bottom: 12px;
+  }
+
+  .home-page #app .section:first-child {
+    padding-top: 20px;
+    padding-bottom: 74px;
+  }
+
+  .home-legal-links {
+    min-height: 48px;
+    font-size: 0.88rem;
   }
 }

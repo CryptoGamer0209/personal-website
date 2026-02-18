@@ -1,4 +1,4 @@
-﻿// Lokaler Speicherkey fuer die Cookie-Entscheidung.
+﻿// Lokaler Speicherkey für die Cookie-Entscheidung.
 const CONSENT_KEY = "nv_cookie_consent_v1";
 
 function getDecision() {
@@ -28,8 +28,8 @@ function openBanner() {
     <p class="cookie-title">Cookie-Hinweis</p>
     <p class="cookie-text">
       Diese Website verwendet Vercel Analytics sowie technisch notwendige lokale Speicherungen
-      fuer deine Cookie-Auswahl. Details findest du in der
-      <a href="./datenschutz.html">Datenschutzerklaerung</a>.
+      für deine Cookie-Auswahl. Details findest du in der
+      <a href="./datenschutz.html">Datenschutzerklärung</a>.
     </p>
     <div class="cookie-actions">
       <button class="cookie-btn secondary" type="button" data-cookie-action="deny">Schliessen</button>
@@ -53,7 +53,7 @@ if (!getDecision()) {
   openBanner();
 }
 
-// Footer-Button zum erneuten Oeffnen der Cookie-Einstellungen.
+// Footer-Button zum erneuten öffnen der Cookie-Einstellungen.
 document.addEventListener("click", (event) => {
   const target = event.target;
 

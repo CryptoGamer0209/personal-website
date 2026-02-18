@@ -1,13 +1,19 @@
 ﻿// Rendert die Hero-Sektion inklusive Stats-Panels.
 export function renderHero(content) {
   // Stats aus den Content-Daten in kleine Panels umwandeln.
-  const stats = content.stats
+  const statPages = [
+    { label: "Projekte", page: "Portfolio", href: "./portfolio.html" },
+    { label: "Links", page: "Links", href: "./linktree.html" },
+    { label: "Stack", page: "Stacks", href: "./stacks.html" },
+    { label: "Fokus", page: "Styleguide", href: "./styleguide.html" }
+  ];
+
+  const stats = statPages
     .map(
       (item) => `
-        <article class="panel reveal">
-          <p class="panel-label">${item.label}</p>
-          <p class="panel-value">${item.value}</p>
-        </article>
+        <a class="panel panel-link panel-link-only reveal" href="${item.href}">
+          <p class="panel-value">${item.page}</p>
+        </a>
       `
     )
     .join("");
@@ -19,10 +25,6 @@ export function renderHero(content) {
           <p class="kicker">Personal Website</p>
           <h1 class="hero-title">${content.profile.name}<br/>${content.profile.role}</h1>
           <p class="hero-text">${content.profile.tagline}</p>
-          <div class="hero-actions">
-            <a class="btn primary" href="./portfolio.html">Portfolio ansehen</a>
-            <a class="btn" href="./linktree.html">Zu meinen Links</a>
-          </div>
         </article>
         <aside class="hero-side">${stats}</aside>
       </div>

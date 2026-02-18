@@ -1,4 +1,4 @@
-﻿// Rendert die Linktree-Sektion mit externen Plattform-Links.
+﻿// Rendert die Links-Sektion mit externen Plattform-Links.
 export function renderLinktree(content) {
   // Pro Link eine klickbare Karte erzeugen.
   const links = content.links
@@ -20,8 +20,8 @@ export function renderLinktree(content) {
       <div class="container">
         <header class="section-head reveal">
           <div>
-            <h2 class="section-title">Linktree</h2>
-            <p class="section-sub">Alle wichtigen Kanaele und Kontaktpunkte in einem Bereich.</p>
+            <h2 class="section-title">Links</h2>
+            <p class="section-sub">Alle wichtigen Kanäle und Kontaktpunkte in einem Bereich.</p>
           </div>
         </header>
         <div class="linktree-grid">${links}</div>

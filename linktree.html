@@ -4,8 +4,8 @@
     <!-- Basis Metadaten -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Links | Niko V</title>
-    <meta name="description" content="Linktree Unterseite mit allen Links von Niko V." />
+    <title>Links | Niko Vehrens</title>
+    <meta name="description" content="Links Unterseite mit allen Links von Niko V." />
 
     <!-- Schriftarten -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,19 +34,22 @@
       <nav class="nav-wrap container">
         <a class="brand" href="./index.html">NV</a>
         <div class="nav-links">
-          <a href="./portfolio.html">Portfolio</a>
-          <a href="./linktree.html">Links</a>
-          <a href="./index.html#kontakt">Kontakt</a>
+          <a data-nav-item="home" href="./index.html">Home</a>
+          <a data-nav-item="portfolio" href="./portfolio.html">Portfolio</a>
+          <a data-nav-item="linktree" href="./linktree.html">Links</a>
+          <a data-nav-item="stacks" href="./stacks.html">Stacks</a>
+          <a data-nav-item="styleguide" href="./styleguide.html">Styleguide</a>
         </div>
       </nav>
     </header>
 
     <!-- Hauptinhalt wird per JavaScript modular gerendert -->
     <main id="app"></main>
+    <div id="global-legal-bar"></div>
 
     <!-- Einwilligungs- und Analytics-Logik -->
+    <script type="module" src="./assets/scripts/persistent-footer.js"></script>
+    <script type="module" src="./assets/scripts/spa-router.js"></script>
     <script type="module" src="./assets/scripts/legal-consent.js"></script>
-    <!-- Einstiegsskript der Linktree-Seite -->
-    <script type="module" src="./assets/scripts/linktree-page.js"></script>
   </body>
 </html>

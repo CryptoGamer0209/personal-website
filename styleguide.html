@@ -1,0 +1,131 @@
+﻿<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styleguide | Niko Vehrens</title>
+    <meta name="description" content="Design-Philosophie und Styleguide der Homepage." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/styles/base.css" />
+    <link rel="stylesheet" href="./assets/styles/components.css" />
+
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+  </head>
+  <body>
+    <div class="site-bg" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+      <nav class="nav-wrap container">
+        <a class="brand" href="./index.html">NV</a>
+        <div class="nav-links">
+          <a data-nav-item="home" href="./index.html">Home</a>
+          <a data-nav-item="portfolio" href="./portfolio.html">Portfolio</a>
+          <a data-nav-item="linktree" href="./linktree.html">Links</a>
+          <a data-nav-item="stacks" href="./stacks.html">Stacks</a>
+          <a data-nav-item="styleguide" href="./styleguide.html">Styleguide</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <header class="styleguide-hero reveal in">
+            <p class="kicker">Design System</p>
+            <h1 class="section-title">Styleguide & Design-Philosophie</h1>
+            <p class="section-sub">
+              Die visuelle Grundlage dieser Website: reduziert, kontrastreich und modular.
+              Jede Komponente folgt klaren Regeln für Lesbarkeit, Fokus und Wiederverwendung.
+            </p>
+          </header>
+
+          <section class="styleguide-grid reveal in">
+            <article class="style-card">
+              <h2>Haltung</h2>
+              <p>Minimalismus mit Charakter. Wenige Elemente, klare Prioritäten, kein visuelles Rauschen.</p>
+            </article>
+            <article class="style-card">
+              <h2>UX-Prinzip</h2>
+              <p>Kurze Wege zu den wichtigsten Zielen: Projekte, Links, Kontakt und Rechtstexte.</p>
+            </article>
+            <article class="style-card">
+              <h2>Komponenten-System</h2>
+              <p>Wiederverwendbare Bausteine wie Hero, Cards, Panels und Legal-Bar statt Einzellösungen.</p>
+            </article>
+            <article class="style-card">
+              <h2>Motion</h2>
+              <p>Zurückhaltende Reveal-Effekte und leichte Hover-Lifts für Orientierung statt Spielerei.</p>
+            </article>
+          </section>
+
+          <section class="style-card style-block reveal in">
+            <h2>Farbpalette</h2>
+            <p class="style-copy">
+              Dunkle Oberflächen bilden den ruhigen Hintergrund. Ein warmer Akzentton steuert
+              Fokus, Buttons und wichtige Interaktionspunkte.
+            </p>
+            <div class="swatch-grid">
+              <article class="swatch">
+                <div class="swatch-chip swatch-bg-main"></div>
+                <p><strong>Background Main</strong><br />#050505</p>
+              </article>
+              <article class="swatch">
+                <div class="swatch-chip swatch-bg-surface"></div>
+                <p><strong>Background Surface</strong><br />#0D0D0D</p>
+              </article>
+              <article class="swatch">
+                <div class="swatch-chip swatch-text-main"></div>
+                <p><strong>Text Main</strong><br />#F3F3F3</p>
+              </article>
+              <article class="swatch">
+                <div class="swatch-chip swatch-accent"></div>
+                <p><strong>Accent</strong><br />#FF7A1A</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="style-card style-block reveal in">
+            <h2>Typografie</h2>
+            <div class="type-showcase">
+              <article class="type-item">
+                <p class="type-label">Headline Font</p>
+                <p class="type-title">Space Grotesk</p>
+                <p class="type-demo-head">Klar. Direkt. Markant.</p>
+              </article>
+              <article class="type-item">
+                <p class="type-label">Body Font</p>
+                <p class="type-title">DM Sans</p>
+                <p class="type-demo-body">
+                  Lesefreundlicher Fließtext mit klarer Hierarchie und ruhigem Grauwert.
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <section class="style-card style-block reveal in">
+            <h2>Technische Design-Regeln</h2>
+            <p class="style-copy">
+              Responsive First, performante Assets, modulare CSS-Struktur und
+              saubere Trennung von Inhalt, Struktur und Darstellung.
+            </p>
+          </section>
+        </div>
+      </section>
+    </main>
+    <div id="global-legal-bar"></div>
+
+    <script type="module" src="./assets/scripts/persistent-footer.js"></script>
+    <script type="module" src="./assets/scripts/spa-router.js"></script>
+    <script type="module" src="./assets/scripts/legal-consent.js"></script>
+  </body>
+</html>

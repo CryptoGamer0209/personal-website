@@ -22,7 +22,7 @@ export function renderPortfolio(content) {
         <header class="section-head reveal">
           <div>
             <h2 class="section-title">Portfolio</h2>
-            <p class="section-sub">Ausgewaehlte Arbeiten im modularen Aufbau. Jede Karte kann als eigenes Template erweitert werden.</p>
+            <p class="section-sub">Ausgewählte Arbeiten im modularen Aufbau. Jede Karte kann als eigenes Template erweitert werden.</p>
           </div>
         </header>
         <div class="portfolio-grid">${cards}</div>
