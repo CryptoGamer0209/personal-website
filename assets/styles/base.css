@@ -186,6 +186,68 @@ img {
   color: var(--text-main);
 }
 
+/* Touch-Geraete erzwingen das mobile Nav-Verhalten, auch bei "Desktop-Website". */
+.touch-device body.home-page {
+  height: auto;
+  min-height: 100svh;
+  overflow: auto;
+}
+
+.touch-device .nav-wrap {
+  min-height: 72px;
+  padding: 8px 0;
+  align-items: center;
+  flex-direction: row;
+}
+
+.touch-device .nav-toggle {
+  display: inline-flex;
+}
+
+.touch-device .nav-links {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  display: grid;
+  gap: 6px;
+  padding: 8px;
+  border-radius: 16px;
+  background: rgba(10, 10, 10, 0.96);
+  border: 1px solid rgba(220, 220, 220, 0.22);
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.touch-device .nav-wrap.nav-open .nav-links {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.touch-device .nav-wrap.nav-open .nav-toggle-line:first-child {
+  transform: translateY(3.5px) rotate(45deg);
+}
+
+.touch-device .nav-wrap.nav-open .nav-toggle-line:last-child {
+  transform: translateY(-3.5px) rotate(-45deg);
+}
+
+.touch-device .nav-active-pill {
+  display: none;
+}
+
+.touch-device .nav-links a {
+  font-size: 0.9rem;
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 12px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .nav-active-pill,
   .nav-links a,

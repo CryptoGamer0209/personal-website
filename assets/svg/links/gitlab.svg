@@ -1,0 +1,8 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t d">
+  <title id="t">GitLab</title><desc id="d">GitLab icon</desc>
+  <rect width="64" height="64" rx="14" fill="#171321"/>
+  <path d="M32 10 38 26H26z" fill="#FC6D26"/>
+  <path d="M14 26h12L20 44z" fill="#E24329"/>
+  <path d="M50 26H38l6 18z" fill="#E24329"/>
+  <path d="M20 44h24L32 54z" fill="#FC6D26"/>
+</svg>

@@ -1,0 +1,7 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t d">
+  <title id="t">TikTok</title><desc id="d">TikTok icon</desc>
+  <rect width="64" height="64" rx="14" fill="#121212"/>
+  <path d="M36 14c2 4 5 7 10 8v8c-3-.2-6-1.2-8-2.6V40a11 11 0 1 1-11-11c.5 0 1 .1 1.5.1v8a3 3 0 1 0 3.5 2.9V14z" fill="#25F4EE" opacity=".9"/>
+  <path d="M34 12c2 4 5 7 10 8v8c-3-.2-6-1.2-8-2.6V38a11 11 0 1 1-11-11c.5 0 1 .1 1.5.1v8a3 3 0 1 0 3.5 2.9V12z" fill="#FE2C55" opacity=".85"/>
+  <path d="M35 13c2 4 5 7 10 8v8c-3-.2-6-1.2-8-2.6V39a11 11 0 1 1-11-11c.5 0 1 .1 1.5.1v8a3 3 0 1 0 3.5 2.9V13z" fill="#fff"/>
+</svg>

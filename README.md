@@ -55,7 +55,9 @@ Array aus Link-Objekten:
   {
     "label": "GitHub",
     "value": "github.com/deinname",
-    "url": "https://github.com/deinname"
+    "url": "https://github.com/deinname",
+    "image": "/assets/svg/links/github.svg",
+    "type": "external"
   }
 ]
 ```
@@ -63,11 +65,27 @@ Array aus Link-Objekten:
 - `label`: Name der Plattform
 - `value`: sichtbarer Untertext
 - `url`: Ziel-URL der Karte
+- `image`: Bild/Icon für die Karte (lokale Datei im Projekt)
+- `type`: `external` oder `file`
+- `download` (optional): `true`, wenn Datei direkt heruntergeladen werden soll
 
 Was ändern für welchen Effekt:
 - Neuen Link hinzufügen: neues Objekt im Array ergänzen
 - Reihenfolge ändern: Objekte verschieben
 - Link entfernen: Objekt löschen
+
+Lokale Datei verlinken (Beispiel):
+
+```json
+{
+  "label": "Lebenslauf (PDF)",
+  "value": "Download",
+  "url": "/assets/files/lebenslauf.pdf",
+  "image": "/assets/svg/links/github.svg",
+  "type": "file",
+  "download": true
+}
+```
 
 Hinweise:
 - JSON erlaubt keine Kommentare und kein Komma nach dem letzten Feld.

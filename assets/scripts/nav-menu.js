@@ -1,4 +1,12 @@
 export function initMobileNav() {
+  const isTouchDevice =
+    window.matchMedia("(hover: none), (pointer: coarse)").matches ||
+    navigator.maxTouchPoints > 0;
+
+  if (isTouchDevice) {
+    document.documentElement.classList.add("touch-device");
+  }
+
   const navWrap = document.querySelector(".nav-wrap");
   const toggle = document.querySelector(".nav-toggle");
   const links = document.querySelector(".nav-links");

@@ -2,17 +2,28 @@
 export function renderLinktree(content) {
   // Pro Link eine klickbare Karte erzeugen.
   const links = content.links
-    .map(
-      (item) => `
-      <a class="link-card reveal" href="${item.url}" target="_blank" rel="noreferrer">
-        <div>
-          <strong>${item.label}</strong>
-          <p class="project-meta">${item.value}</p>
+    .map((item) => {
+      const href = item.url || item.path || "#";
+      const isFile = item.type === "file";
+      const isExternal = !isFile && /^https?:\/\//i.test(href);
+      const targetAttr = isExternal ? ' target="_blank" rel="noreferrer"' : "";
+      const downloadAttr = item.download ? " download" : "";
+      const image = item.image || "./assets/svg/links/github.svg";
+      const arrow = isFile ? "Datei" : "->";
+
+      return `
+      <a class="link-card reveal" href="${href}"${targetAttr}${downloadAttr}>
+        <div class="link-card-main">
+          <img class="link-thumb" src="${image}" alt="${item.label} Logo" loading="lazy" />
+          <div class="link-copy">
+            <strong>${item.label}</strong>
+            <p class="project-meta">${item.value}</p>
+          </div>
         </div>
-        <span aria-hidden="true">-></span>
+        <span aria-hidden="true">${arrow}</span>
       </a>
-    `
-    )
+    `;
+    })
     .join("");
 
   return `

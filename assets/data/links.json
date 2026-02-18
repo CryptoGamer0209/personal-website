@@ -2,31 +2,43 @@
   {
     "label": "GitHub",
     "value": "github.com/CryptoGamer0209",
-    "url": "https://github.com/CryptoGamer0209"
+    "url": "https://github.com/CryptoGamer0209",
+    "image": "./assets/svg/links/github.svg",
+    "type": "external"
   },
   {
     "label": "GitLab",
     "value": "gitlab.com/CryptoGamer1612",
-    "url": "https://gitlab.com/CryptoGamer1612"
+    "url": "https://gitlab.com/CryptoGamer1612",
+    "image": "./assets/svg/links/gitlab.svg",
+    "type": "external"
   },
   {
     "label": "Instagram",
     "value": "instagram.com/noname_acc09",
-    "url": "https://www.instagram.com/noname_acc09/"
+    "url": "https://www.instagram.com/noname_acc09/",
+    "image": "./assets/svg/links/instagram.svg",
+    "type": "external"
   },
   {
     "label": "Steam",
     "value": "steamcommunity.com/id/CryptoGamer1612/",
-    "url": "https://steamcommunity.com/id/CryptoGamer1612/"
+    "url": "https://steamcommunity.com/id/CryptoGamer1612/",
+    "image": "./assets/svg/links/steam.svg",
+    "type": "external"
   },
   {
     "label": "Twitch",
     "value": "twitch.tv/cryptogamer1612",
-    "url": "https://www.twitch.tv/cryptogamer1612"
+    "url": "https://www.twitch.tv/cryptogamer1612",
+    "image": "./assets/svg/links/twitch.svg",
+    "type": "external"
   },
   {
     "label": "Tiktok",
     "value": "tiktok.com/@noname_acc09",
-    "url": "https://www.tiktok.com/@noname_acc09"
+    "url": "https://www.tiktok.com/@noname_acc09",
+    "image": "./assets/svg/links/tiktok.svg",
+    "type": "external"
   }
 ]
